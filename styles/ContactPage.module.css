@@ -1,0 +1,6 @@
+/* styles/ContactPage.module.css */
+
+/* Add extra space above <ContactSection /> on the standalone Contact page */
+.contactWrapper {
+  margin-top: 6rem; /* adjust this value as needed */
+}

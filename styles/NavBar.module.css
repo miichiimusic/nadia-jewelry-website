@@ -1,0 +1,84 @@
+/* styles/NavBar.module.css */
+
+/* Base navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;                    /* fixed height */
+  z-index: 100;                    /* sits above page content */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Show/hide on scroll */
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+/* By default (desktop), heroBg and solid both yield a white background */
+.heroBg {
+  background-color: white;
+}
+
+/* Solid white background once you scroll up */
+.solid {
+  background-color: white;
+}
+
+/* Override heroBg to be transparent—but only on mobile */
+@media (max-width: 768px) {
+  .heroBg {
+    background-color: transparent;
+  }
+}
+
+/* Inner flex container for left/center/right items */
+.inner {
+  width: 100%;          
+  display: flex;
+  align-items: center;        /* vertically center children */
+  justify-content: space-between;
+  height: 100%;               /* fill the navbar height */
+  padding: 0 1rem;            /* only horizontal padding */
+}
+
+/* Apply horizontal padding only on desktop */
+@media (min-width: 769px) {
+  .inner {
+    padding: 0 3rem;
+  }
+}
+
+/* Brand name styling */
+.brand {
+  font-family: 'Bodoni Moda', serif; /* same font as your headings */
+  font-size: 1.5rem;                 /* matching your heroHeading size */
+  color: #171717;                    /* always black */
+  text-decoration: none;
+}
+
+/* Style for icon buttons (hamburger + phone) */
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #616161;                    /* medium gray */
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Desktop (≥769px) overrides ===== */
+@media (min-width: 769px) {
+  .navbar {
+    height: 4rem;       /* taller navbar on desktop */
+  }
+
+  .brand {
+    font-size: 2rem;    /* larger brand name on desktop */
+  }
+}

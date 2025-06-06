@@ -1,0 +1,46 @@
+/* styles/Footer.module.css */
+
+.footer {
+  color: #171717;
+  padding: 2rem 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* Stack nav above copyright and center everything */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Nav links */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem; /* space between links and copyright */
+}
+
+.link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #171717;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #555555;
+}
+
+/* Copyright text */
+.copy {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  color: #555555;
+}

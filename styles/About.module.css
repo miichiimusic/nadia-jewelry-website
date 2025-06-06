@@ -1,0 +1,90 @@
+/* styles/About.module.css */
+
+.main {
+  /* push content below the fixed navbar */
+  padding-top: 3rem;
+}
+
+@media (min-width: 769px) {
+  .main {
+    padding-top: 4rem;
+  }
+}
+
+/* ===== Page Title (“Timeline”) ===== */
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0; /* vertical spacing around the title */
+  padding: 0 1.5rem;    /* <--- added: left/right padding */
+}
+
+/* Thin horizontal line on either side */
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #cccccc;
+  padding-left: 4rem;
+}
+
+/* Actual title text */
+.aboutPageTitle {
+  margin: 0 1rem; /* spacing between text and lines */
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+/* Container for two-column layout */
+.aboutContainer {
+  display: flex;
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Each item: image on top, paragraph below */
+.aboutItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image styling */
+.aboutImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph below each image */
+.aboutText p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  max-width: 650px;
+  margin-bottom: 1.5rem; /* Or adjust as needed */
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1.5rem 1rem;
+  }
+  .aboutText {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}

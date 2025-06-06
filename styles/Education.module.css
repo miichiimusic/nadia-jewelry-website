@@ -1,0 +1,102 @@
+/* styles/Education.module.css */
+
+.educationContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  padding-top: 8rem; /* Space for the fixed header */
+}
+
+.educationTitle {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #171717;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tagItem,
+.tagItemActive {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tagItem:hover {
+  background-color: #f0f0f0;
+}
+
+.tagItemActive {
+  background-color: #171717;
+  color: white;
+  border-color: #171717;
+}
+
+.postList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.postItem {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.postLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.postTitle {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #171717;
+}
+
+.postDate {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  color: #777;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.postDescription {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.postTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.postTag {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  background-color: #eef;
+  color: #224;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}

@@ -1,168 +1,250 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
+/* styles/Home.module.css */
 
 .main {
+  padding-top: 3rem;
+}
+
+/* ------------- Hero Section Styles ------------- */
+
+/* ----------------- Colored Hero Section ----------------- */
+.coloredHeroSection {
+  background-color: #fdfbf5; /* change this to your desired color */
+}
+
+.heroSection {
+  display: flex;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.heroLeft,
+.heroRight {
+  width: 50%;
+}
+
+/* Left side: center everything both vertically & horizontally */
+.heroLeft {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
   align-items: center;
-  gap: 8px;
+  padding: 2rem;
+  text-align: center;
 }
 
-.footer img {
-  flex-shrink: 0;
+/* ----------------------------------------------------
+   New light “pre‐title” above the main hero heading
+---------------------------------------------------- */
+.heroPreTitle {
+  font-size: 0.875rem;        /* small size */
+  color: #777777;             /* light gray */
+  margin-top: 0.75rem;        /* space above the link */
+  font-family: sans-serif;    /* match body font */
+  text-decoration: underline; /* make it look like a link */
+  text-underline-offset: 10px;
+  text-decoration-color: #777777;
+}
+.heroPreTitle:hover {
+  color: #555555;             /* slightly darker on hover */
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+.heroHeading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: normal;
+  font-family: 'Bodoni Moda', serif;
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
+.heroText {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+  font-family: sans-serif;
+  color: #333333;
+  line-height: 1.4; 
+}
 
+.heroLink {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-decoration-color: #333;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 1px;
+  color: black;
+  font-family: 'Bodoni Moda', serif;
+}
+
+/* Right side: let the Image component determine height */
+.heroRight {
+  /* position: relative is no longer required if we’re not using fill */
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* -------------- Mobile-responsive tweaks for Hero Sections (<=768px) ------------ */
+/* -------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
   .main {
-    align-items: center;
+    padding-top: 0;
+  }
+  
+  .heroSection {
+    flex-direction: column;   /* stack children vertically */
+    padding-top: 3rem;           /* section touches top under navbar */
   }
 
-  .main ol {
-    text-align: center;
+  /* For the first section only, invert that vertical stack so image comes first */
+  .reverseOnMobile {
+    flex-direction: column-reverse;
   }
 
-  .ctas {
+  /* Make each half take full width when stacked */
+  .heroLeft,
+  .heroRight {
+    width: 100%;
+  }
+
+  /* Adjust padding so the text container is pushed below the 3rem navbar */
+  .heroLeft {
+    padding-top: 3rem;       /* push text below navbar */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    aspect-ratio: 1.5 / 1;    /* makes width and height equal */
+  }
+
+  /* ────── Custom ratio for the New Top Hero’s text side ────── */
+  .newHeroLeft {
+    aspect-ratio: 2 / 0.8;     /* for example, make it 3:2 on mobile */
+  }
+  /* ───────────────────────────────────────────────────────────────── */
+}
+
+/* ----------------- Info Section (3 Columns) ----------------- */
+.infoSection {
+  display: flex;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 6rem 1.5rem;      /* top/bottom 6rem, left/right 1.5rem */
+  gap: 2rem;                 /* space between the three columns */
+  background-color: #ffffff; /* or whatever neutral background you prefer */
+}
+
+.infoItem {
+  flex: 1;                   /* each takes equal width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;             /* inside padding for breathing room */
+}
+
+.infoHeading {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: black;
+  font-weight: normal;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.infoText {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 300px;          /* limit line length for readability */
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  line-height: 1.4;
+}
+
+.infoLink {
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-decoration-color: #777777;
+  text-underline-offset: 2px;
+  color: #777777;
+  font-family: sans-serif;
+}
+
+.infoLink:hover {
+  color: #555555;
+}
+
+/* ======= Responsive: stack into one column on mobile (≤768px) ======= */
+@media (max-width: 768px) {
+  .infoSection {
     flex-direction: column;
+    padding: 2rem 1.5rem;   /* you can adjust mobile padding here */
+    gap: 3rem;             /* larger vertical gap between items */
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  .infoItem {
+    width: 100%;
   }
 }
+/* --------------------------------------------------------------------- */
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+/* ----------------- Feature Section Styles ----------------- */
+
+.featureSection {
+  display: flex;
+  width: 100%;
+  padding: 2rem 4rem;       /* horizontal padding to differentiate */
+  gap: 3rem;                  /* space between the two items */
+}
+
+.featureItem {
+  flex: 1;                    /* each takes equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Make the image fill the container’s width, height auto */
+.featureImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.featureHeading {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: black;
+  font-weight: normal;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.featureText {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* ============ Responsive: stack into one column ============ */
+@media (max-width: 768px) {
+  .featureSection {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 4rem;
+  }
+  .featureItem {
+    width: 100%;
   }
 }
+/* ----------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* -------------- End Hero Section --------------- */
