@@ -50,7 +50,7 @@
 }
 
 .heroHeading {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   color: black;
   font-weight: normal;
@@ -58,7 +58,7 @@
 }
 
 .heroText {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 1.5rem;
   max-width: 400px;
   font-family: sans-serif;
@@ -67,13 +67,13 @@
 }
 
 .heroLink {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   text-decoration: underline;
   text-decoration-color: #333;
   text-underline-offset: 8px;
   text-decoration-thickness: 1px;
-  color: black;
-  font-family: 'Bodoni Moda', serif;
+  color: rgb(62, 62, 62);
+  font-family: sans-serif;
 }
 
 /* Right side: let the Image component determine height */
@@ -244,7 +244,49 @@
   .featureItem {
     width: 100%;
   }
+  /* Custom aspect ratio for the “Our Design Ethos” text container on mobile */
+.ethosLeft {
+  aspect-ratio: 5 / 2;  /* change 3/2 to whatever ratio you prefer */
+}
 }
 /* ----------------------------------------------------------- */
 /* -------------------------------------------------------------------------------- */
 /* -------------- End Hero Section --------------- */
+
+/* A special background for the “Our Design Ethos” section */
+.ethosSection {
+  background-color: #fefaf6;
+}
+
+/* Give “Made Just for You” its own background color */
+.madeSection {
+  background-color: #f6f6f6;  /* ← swap in whatever color you prefer */
+}
+
+/* Mobile‐only: custom aspect ratio for that text column */
+@media (max-width: 768px) {
+  .madeLeft {
+    aspect-ratio: 6 / 3;  /* e.g. 4:3 ratio—adjust as you like */
+  }
+}
+
+/* Make the pendant image fill its container’s width */
+.customExperienceImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1.5rem; /* space before the heading */
+  display: block;
+}
+
+/* Give Section #3 (“The Custom Experience”) its own background */
+.customExperienceSection {
+  background-color: #f8f7f5;  /* swap in whatever soft color you prefer */
+}
+
+@media (max-width: 768px) {
+  /* On mobile, add space below the text half only */
+  .customExperienceSection .heroLeft {
+    margin-bottom: 4rem;  /* tweak to taste */
+  }
+}

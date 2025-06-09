@@ -29,74 +29,61 @@ export default function Home() {
           />
         </div>
       </section>
-      
-      {/* ==== Section #1 (Text Left, Image Right; mobile flips) ==== */}
-      <section className={`${styles.heroSection}`}>
-        <div className={styles.heroLeft}>
-          <h1 className={styles.heroHeading}>Made Just for You</h1>
-          <p className={styles.heroText}>
-            Distinct pieces made with intention, shaped by your vision, and
-            crafted to last.
-          </p>
-          <a href="#get-started" className={styles.heroLink}>
-            Get Started
-          </a>
-        </div>
-        <div className={styles.heroRight}>
-          <Image
-            src="/gold_earrings.jpg"
-            alt="Gold earrings"
-            width={800}
-            height={600}
-            className={styles.heroImage}
-            placeholder="empty"
-          />
-        </div>
-      </section>
 
-      {/* ==== Section #2 (Image Left, Text Right) ==== */}
-      <section className={`${styles.heroSection} ${styles.reverseOnMobile}`}>
+      {/* ==== Section #3 (duplicate of #1; mobile flips; custom background) ==== */}
+<section
+  className={`${styles.heroSection} ${styles.customExperienceSection}`}
+>
+  <div className={styles.heroLeft}>
+    <Image
+      src="/rose_pendant.jpg"
+      alt="Rose Pendant"
+      width={800}
+      height={600}
+      className={styles.customExperienceImage}
+      placeholder="empty"
+    />
+
+    <h1 className={styles.heroHeading}>The Custom Experience</h1>
+    <p className={styles.heroText}>
+      From concept to creation, we guide you through a personalized process that turns ideas into treasures.
+    </p>
+    <a href="#get-started" className={styles.heroLink}>
+      GET STARTED
+    </a>
+  </div>
+  <div className={styles.heroRight}>
+    <Image
+      src="/black_white_model.jpg"
+      alt="Black & white model"
+      width={800}
+      height={600}
+      className={styles.heroImage}
+      placeholder="empty"
+    />
+  </div>
+</section>
+
+     {/* ==== Section #2 (Image Left, Text Right) ==== */}
+      <section className={`${styles.heroSection} ${styles.reverseOnMobile} ${styles.ethosSection}`}>
         <div className={styles.heroRight}>
           <Image
-            src="/sapphire_earrings.jpg"
-            alt="Sapphire earrings"
+            src="/pink_diamond_ring.jpg"
+            alt="Pink diamond ring"
             width={800}
             height={600}
             className={styles.heroImage}
             placeholder="empty"
           />
         </div>
-        <div className={styles.heroLeft}>
+        <div className={`${styles.heroLeft} ${styles.ethosLeft}`}>
           <h1 className={styles.heroHeading}>Our Design Ethos</h1>
           <p className={styles.heroText}>
             We create one-of-a-kind pieces that reflect your story, blending artistic vision with timeless design.
           </p>
           <a href="#get-started" className={styles.heroLink}>
-            Get Started
+            GET STARTED
           </a>
-        </div>
-      </section>
-
-      {/* ==== Section #3 (duplicate of #1; mobile flips) ==== */}
-      <section className={`${styles.heroSection}`}>
-        <div className={styles.heroLeft}>
-          <h1 className={styles.heroHeading}>The Custom Experience</h1>
-          <p className={styles.heroText}>
-            From concept to creation, we guide you through a personalized process that turns ideas into treasures.
-          </p>
-          <a href="#get-started" className={styles.heroLink}>
-            Get Started
-          </a>
-        </div>
-        <div className={styles.heroRight}>
-          <Image
-            src="/black_white_model.jpg"
-            alt="Gold earrings"
-            width={800}
-            height={600}
-            className={styles.heroImage}
-            placeholder="empty"
-          />
         </div>
       </section>
 
@@ -118,10 +105,33 @@ export default function Home() {
             We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
           </p>
           <a href="#get-started" className={styles.heroLink}>
-            Get Started
+            GET STARTED
           </a>
         </div>
       </section>
+      
+      {/* ==== Section #1 (Text Left, Image Right; colored background + mobile ratio) ==== */}
+<section className={`${styles.heroSection} ${styles.madeSection}`}>
+  <div className={`${styles.heroLeft} ${styles.madeLeft}`}>
+    <h1 className={styles.heroHeading}>Made Just for You</h1>
+    <p className={styles.heroText}>
+      Distinct pieces made with intention, shaped by your vision, and crafted to last.
+    </p>
+    <a href="#get-started" className={styles.heroLink}>
+      GET STARTED
+    </a>
+  </div>
+  <div className={styles.heroRight}>
+    <Image
+      src="/gold_earrings.jpg"
+      alt="Gold earrings"
+      width={800}
+      height={600}
+      className={styles.heroImage}
+      placeholder="empty"
+    />
+  </div>
+</section>
 
       {/* =============== Info Section (3 Columns) =============== */}
 <section className={styles.infoSection}>
