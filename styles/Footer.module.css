@@ -23,13 +23,13 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-  margin-bottom: 1rem; /* space between links and copyright */
+  margin-bottom: 3rem; /* space between links and copyright */
 }
 
 .link {
   font-family: 'Roboto', sans-serif;
   font-size: 0.95rem;
-  color: #171717;
+  color: #636363;
   text-decoration: none;
   transition: color 0.2s ease;
 }

@@ -107,14 +107,14 @@ export default function Home() {
       We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
     </p>
     <a href="#get-started" className={styles.heroLink}>
-      Get Started
+      INQUIRE
     </a>
   </div>
 
   {/* ––––– Column #2 (duplicate of column #1 for now) ––––– */}
   <div className={`${styles.heroLeft} ${styles.withTopImage}`}>
     <Image
-      src="/lapiz.jpg"           // you can swap this for a different image
+      src="/jade_earrings.jpg"           // you can swap this for a different image
       alt="Materials & Craftsmanship"
       width={800}
       height={600}
@@ -127,7 +127,7 @@ export default function Home() {
       We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
     </p>
     <a href="#get-started" className={styles.heroLink}>
-      Get Started
+      INQUIRE
     </a>
   </div>
 </section>
@@ -197,10 +197,11 @@ export default function Home() {
   {/* ––––– Feature Item #1 ––––– */}
   <div className={styles.featureItem}>
     <Image
-      src="/our_promise.jpg"      /* ← put your image in /public/ */
+      src="/about1.jpg"      /* ← put your image in /public/ */
       alt="Feature 1"
       width={800}
       height={600}
+      quality={100} 
       className={styles.featureImage}
       placeholder="empty"
     />
@@ -216,7 +217,7 @@ export default function Home() {
   {/* ––––– Feature Item #2 ––––– */}
   <div className={styles.featureItem}>
     <Image
-      src="/fashion_news.jpg"      /* ← put your second image in /public/ */
+      src="/about2.jpg"      /* ← put your second image in /public/ */
       alt="Feature 2"
       width={800}
       height={600}

@@ -44,7 +44,7 @@
 .aboutContainer {
   display: flex;
   gap: 2rem;
-  max-width: 1600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -63,7 +63,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* Paragraph below each image */
