@@ -290,3 +290,24 @@
     margin-bottom: 4rem;  /* tweak to taste */
   }
 }
+
+/* Section #4: Materials & Craftsmanship custom background */
+.materialsSection {
+  background-color: #fcfefb;  /* your chosen tint */
+}
+
+/* Make .withTopImage stack image above the standard text */
+.withTopImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Force that topImage to fill its column */
+.topImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem; /* space between image and heading */
+}

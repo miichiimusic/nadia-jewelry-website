@@ -40,6 +40,7 @@ export default function Home() {
       alt="Rose Pendant"
       width={800}
       height={600}
+      quality={100} 
       className={styles.customExperienceImage}
       placeholder="empty"
     />
@@ -72,6 +73,7 @@ export default function Home() {
             alt="Pink diamond ring"
             width={800}
             height={600}
+            quality={100} 
             className={styles.heroImage}
             placeholder="empty"
           />
@@ -87,28 +89,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==== Section #4 (duplicate of #2; no mobile flip needed) ==== */}
-      <section className={`${styles.heroSection} ${styles.reverseOnMobile}`}>
-        <div className={styles.heroRight}>
-          <Image
-            src="/color_model.jpg"
-            alt="Sapphire earrings"
-            width={800}
-            height={600}
-            className={styles.heroImage}
-            placeholder="empty"
-          />
-        </div>
-        <div className={styles.heroLeft}>
-          <h1 className={styles.heroHeading}>Materials & Craftsmanship</h1>
-          <p className={styles.heroText}>
-            We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
-          </p>
-          <a href="#get-started" className={styles.heroLink}>
-            GET STARTED
-          </a>
-        </div>
-      </section>
+      {/* ==== Section #4 (Materials & Craftsmanship; image on top in both columns) ==== */}
+<section className={`${styles.heroSection} ${styles.materialsSection}`}>
+  {/* ––––– Column #1 ––––– */}
+  <div className={`${styles.heroLeft} ${styles.withTopImage}`}>
+    <Image
+      src="/lapiz.jpg"           // your first image
+      alt="Materials & Craftsmanship"
+      width={800}
+      height={600}
+      quality={100} 
+      className={styles.topImage}
+      placeholder="empty"
+    />
+    <h1 className={styles.heroHeading}>Materials & Craftsmanship</h1>
+    <p className={styles.heroText}>
+      We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
+    </p>
+    <a href="#get-started" className={styles.heroLink}>
+      Get Started
+    </a>
+  </div>
+
+  {/* ––––– Column #2 (duplicate of column #1 for now) ––––– */}
+  <div className={`${styles.heroLeft} ${styles.withTopImage}`}>
+    <Image
+      src="/lapiz.jpg"           // you can swap this for a different image
+      alt="Materials & Craftsmanship"
+      width={800}
+      height={600}
+      quality={100} 
+      className={styles.topImage}
+      placeholder="empty"
+    />
+    <h1 className={styles.heroHeading}>Materials & Craftsmanship</h1>
+    <p className={styles.heroText}>
+      We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
+    </p>
+    <a href="#get-started" className={styles.heroLink}>
+      Get Started
+    </a>
+  </div>
+</section>
       
       {/* ==== Section #1 (Text Left, Image Right; colored background + mobile ratio) ==== */}
 <section className={`${styles.heroSection} ${styles.madeSection}`}>
