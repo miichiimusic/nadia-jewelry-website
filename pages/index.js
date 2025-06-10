@@ -14,7 +14,7 @@ export default function Home() {
             From concept to creation, we craft one-of-a-kind jewelry, made to order with precision, beauty, and meaning.
           </p>
           <a href="#get-started" className={styles.heroPreTitle}>
-      DESIGNED JUST FOR YOU
+      GET STARTED
     </a>
         </div>
         <div className={styles.heroRight}>
@@ -47,7 +47,7 @@ export default function Home() {
 
     <h1 className={styles.heroHeading}>The Custom Experience</h1>
     <p className={styles.heroText}>
-      From concept to creation, we guide you through a personalized process that turns ideas into treasures.
+      We translate your ideas into heirlooms, offering a bespoke process that is as memorable as the jewelry itself.
     </p>
     <a href="#get-started" className={styles.heroLink}>
       GET STARTED
@@ -81,7 +81,7 @@ export default function Home() {
         <div className={`${styles.heroLeft} ${styles.ethosLeft}`}>
           <h1 className={styles.heroHeading}>Our Design Ethos</h1>
           <p className={styles.heroText}>
-            We create one-of-a-kind pieces that reflect your story, blending artistic vision with timeless design.
+            We create jewelry that reflects your story, blending artistic vision with timeless design.
           </p>
           <a href="#get-started" className={styles.heroLink}>
             GET STARTED
@@ -102,9 +102,9 @@ export default function Home() {
       className={styles.topImage}
       placeholder="empty"
     />
-    <h1 className={styles.heroHeading}>Materials & Craftsmanship</h1>
+    <h1 className={styles.heroHeading}>York Paris Cocktail Ring</h1>
     <p className={styles.heroText}>
-      We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
+      18K White Gold Ring with a Custom Cut Lapiz Stone
     </p>
     <a href="#get-started" className={styles.heroLink}>
       INQUIRE
@@ -122,9 +122,9 @@ export default function Home() {
       className={styles.topImage}
       placeholder="empty"
     />
-    <h1 className={styles.heroHeading}>Materials & Craftsmanship</h1>
+    <h1 className={styles.heroHeading}>Orbit Turquoise Earrings</h1>
     <p className={styles.heroText}>
-      We source the finest stones and metals, handcrafted by master artisans to ensure each detail is flawless.
+      18K Yellow Gold Earrings with Custom Cut Cabochon Turquoise Stones
     </p>
     <a href="#get-started" className={styles.heroLink}>
       INQUIRE
@@ -163,9 +163,6 @@ export default function Home() {
     <p className={styles.infoText}>
       We promise you’ll love your custom piece—or we’ll make it right.
     </p>
-    <a href="#learn-more" className={styles.infoLink}>
-      Learn More
-    </a>
   </div>
 
   {/* ––––– Info Item #2 ––––– */}
@@ -174,9 +171,6 @@ export default function Home() {
     <p className={styles.infoText}>
       Each design is handcrafted by artisans with decades of experience.
     </p>
-    <a href="#learn-more" className={styles.infoLink}>
-      Learn More
-    </a>
   </div>
 
   {/* ––––– Info Item #3 ––––– */}
@@ -185,9 +179,6 @@ export default function Home() {
     <p className={styles.infoText}>
       We source only the finest metals and stones for lasting beauty.
     </p>
-    <a href="#learn-more" className={styles.infoLink}>
-      Learn More
-    </a>
   </div>
 </section>
 {/* ============================================================ */}
@@ -209,9 +200,6 @@ export default function Home() {
     <p className={styles.featureText}>
       We share insights on materials, design options, and craftsmanship so you can make confident, meaningful choices.
     </p>
-    <a href="#get-started" className={styles.heroLink}>
-      Get Started
-    </a>
   </div>
 
   {/* ––––– Feature Item #2 ––––– */}
@@ -229,9 +217,6 @@ export default function Home() {
     <p className={styles.featureText}>
       We focus on refined materials, precise craftsmanship, and timeless design to ensure your vision is built to last.
     </p>
-    <a href="#get-started" className={styles.heroLink}>
-      Get Started
-    </a>
   </div>
 </section>
 {/* ============================================================== */}

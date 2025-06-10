@@ -38,12 +38,12 @@
 ---------------------------------------------------- */
 .heroPreTitle {
   font-size: 0.875rem;        /* small size */
-  color: #777777;             /* light gray */
+  color: #333;             /* light gray */
   margin-top: 0.75rem;        /* space above the link */
   font-family: sans-serif;    /* match body font */
   text-decoration: underline; /* make it look like a link */
   text-underline-offset: 10px;
-  text-decoration-color: #777777;
+  text-decoration-color: #333;
 }
 .heroPreTitle:hover {
   color: #555555;             /* slightly darker on hover */
@@ -114,7 +114,7 @@
 
   /* Adjust padding so the text container is pushed below the 3rem navbar */
   .heroLeft {
-    padding-top: 3rem;       /* push text below navbar */
+    padding-top: 5rem;       /* push text below navbar */
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 1.5rem;
@@ -198,6 +198,7 @@
   display: flex;
   width: 100%;
   padding: 2rem 4rem;       /* horizontal padding to differentiate */
+  margin-bottom: 3rem; /* space below the section */
   gap: 3rem;                  /* space between the two items */
 }
 
@@ -293,7 +294,7 @@
 
 /* Section #4: Materials & Craftsmanship custom background */
 .materialsSection {
-  background-color: #fcfefb; 
+  background-color: #fcfcfc; 
   padding-bottom: 4rem; /* your chosen tint */
 }
 
