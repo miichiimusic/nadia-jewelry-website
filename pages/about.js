@@ -28,14 +28,10 @@ export default function AboutPage() {
           />
           <div className={styles.aboutText}>
             <p>
-              Founder Leonardo Ortegon grew up in the jewelry world. Born in Colombia and raised in South Florida, his earliest memories are tied to his family’s store—learning, watching, and slowly mastering the craft. 
-              By 19, he was working full-time at Precious Moments Jewelers, gaining hands-on experience in diamond sales, CAD design, bench work, and customer service. Over time, he recognized a need for jewelry that combined design integrity with personal meaning. 
-              York Paris is Leonardo’s response—a brand shaped by legacy and driven by vision. His background jewelry informs his approach: blending precision with creativity, structure with emotion.
+              Founder Leonardo Ortegon grew up immersed in the world of jewelry. Born in Colombia and raised in South Florida from the age of 13, his earliest memories as a teenager were spent behind the counter of his aunt’s jewelry store—watching, listening, and slowly absorbing the rhythm of the trade. It was there that he first understood the emotional weight jewelry could carry and the trust that clients placed in the people who made it. That early exposure turned into a passion, and by 19, Leonardo had stepped into a more formal role at his cousin’s store, Precious Moments Jewelers. Over the next decade, he worked across every part of the business: diamond sales, custom design, CAD rendering, bench repairs, vendor sourcing, and customer service. Eventually, he took on the day-to-day management of the store, gaining not just technical expertise but a real-world understanding of what makes a jewelry business thrive.
             </p>
             <p>
-              York Paris is Leonardo’s response—a brand shaped by legacy and driven by vision. His background in both jewelry and music production informs his approach: blending precision with creativity, structure with emotion. 
-              The name captures the brand’s dual spirit: “York” evokes structure and strength, while “Paris” suggests elegance, emotion, and artistry. Together, they represent a balance of contrast—masculine and feminine, bold and soft, timeless and modern. 
-              York Paris offers both custom and ready-to-wear pieces, crafted with precision and designed to tell a story. It’s more than jewelry—it’s a perspective.
+              That experience laid the foundation for York Paris—a brand built to offer a more thoughtful and design-driven approach to fine jewelry. Every piece reflects Leonardo’s belief in quiet elegance, refined simplicity, and personal connection. Whether custom-made or ready-to-wear, York Paris pieces are created with care, intention, and a deep respect for the people who wear them. The brand is not about trends or excess—it’s about meaningful design, made to last and made to matter.
             </p>
           </div>
         </div>

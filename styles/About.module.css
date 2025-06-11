@@ -68,11 +68,11 @@
 
 /* Paragraph below each image */
 .aboutText p {
+  text-align: left;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: #333333;
-  max-width: 650px;
   margin-bottom: 1.5rem; /* Or adjust as needed */
 }
 

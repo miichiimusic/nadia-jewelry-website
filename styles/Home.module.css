@@ -68,7 +68,6 @@
 
 .heroLink {
   font-size: 0.8rem;
-  text-decoration: underline;
   text-decoration-color: #333;
   text-underline-offset: 8px;
   text-decoration-thickness: 1px;
@@ -282,7 +281,7 @@
 
 /* Give Section #3 (“The Custom Experience”) its own background */
 .customExperienceSection {
-  background-color: #f8f7f5;  /* swap in whatever soft color you prefer */
+  background-color: #faf8f7;  /* swap in whatever soft color you prefer */
 }
 
 @media (max-width: 768px) {

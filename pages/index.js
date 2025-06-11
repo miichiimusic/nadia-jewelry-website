@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -49,9 +50,6 @@ export default function Home() {
     <p className={styles.heroText}>
       We translate your ideas into heirlooms, offering a bespoke process that is as memorable as the jewelry itself.
     </p>
-    <a href="#get-started" className={styles.heroLink}>
-      GET STARTED
-    </a>
   </div>
   <div className={styles.heroRight}>
     <Image
@@ -81,11 +79,8 @@ export default function Home() {
         <div className={`${styles.heroLeft} ${styles.ethosLeft}`}>
           <h1 className={styles.heroHeading}>Our Design Ethos</h1>
           <p className={styles.heroText}>
-            We create jewelry that reflects your story, blending artistic vision with timeless design.
+            Jewelry should reflect a personal story, where artistic vision meets timeless form and meaning is built into every detail.
           </p>
-          <a href="#get-started" className={styles.heroLink}>
-            GET STARTED
-          </a>
         </div>
       </section>
 
@@ -93,43 +88,43 @@ export default function Home() {
 <section className={`${styles.heroSection} ${styles.materialsSection}`}>
   {/* ––––– Column #1 ––––– */}
   <div className={`${styles.heroLeft} ${styles.withTopImage}`}>
-    <Image
-      src="/lapiz.jpg"           // your first image
-      alt="Materials & Craftsmanship"
-      width={800}
-      height={600}
-      quality={100} 
-      className={styles.topImage}
-      placeholder="empty"
-    />
+  <Image
+    src="/lapiz.jpg"
+    alt="York Paris Cocktail Ring"
+    width={800}
+    height={600}
+    quality={100}
+    className={styles.topImage}
+    placeholder="empty"
+  />
+  <Link href="/contact" className={styles.textLink}>
     <h1 className={styles.heroHeading}>York Paris Cocktail Ring</h1>
     <p className={styles.heroText}>
       18K White Gold Ring with a Custom Cut Lapiz Stone
     </p>
-    <a href="#get-started" className={styles.heroLink}>
-      INQUIRE
-    </a>
-  </div>
+    <span className={styles.heroLink}>$1,795</span>
+  </Link>
+</div>
 
   {/* ––––– Column #2 (duplicate of column #1 for now) ––––– */}
   <div className={`${styles.heroLeft} ${styles.withTopImage}`}>
-    <Image
-      src="/jade_earrings.jpg"           // you can swap this for a different image
-      alt="Materials & Craftsmanship"
-      width={800}
-      height={600}
-      quality={100} 
-      className={styles.topImage}
-      placeholder="empty"
-    />
+  <Image
+    src="/jade_earrings.jpg"
+    alt="Orbit Turquoise Earrings"
+    width={800}
+    height={600}
+    quality={100}
+    className={styles.topImage}
+    placeholder="empty"
+  />
+  <Link href="/contact" className={styles.textLink}>
     <h1 className={styles.heroHeading}>Orbit Turquoise Earrings</h1>
     <p className={styles.heroText}>
       18K Yellow Gold Earrings with Custom Cut Cabochon Turquoise Stones
     </p>
-    <a href="#get-started" className={styles.heroLink}>
-      INQUIRE
-    </a>
-  </div>
+    <span className={styles.heroLink}>$1,250</span>
+  </Link>
+</div>
 </section>
       
       {/* ==== Section #1 (Text Left, Image Right; colored background + mobile ratio) ==== */}
@@ -139,9 +134,6 @@ export default function Home() {
     <p className={styles.heroText}>
       Distinct pieces made with intention, shaped by your vision, and crafted to last.
     </p>
-    <a href="#get-started" className={styles.heroLink}>
-      GET STARTED
-    </a>
   </div>
   <div className={styles.heroRight}>
     <Image
@@ -161,7 +153,7 @@ export default function Home() {
   <div className={styles.infoItem}>
     <h3 className={styles.infoHeading}>Satisfaction Guarantee</h3>
     <p className={styles.infoText}>
-      We promise you’ll love your custom piece—or we’ll make it right.
+      We promise you’ll love your custom piece, or we’ll make it right.
     </p>
   </div>
 
@@ -169,15 +161,15 @@ export default function Home() {
   <div className={styles.infoItem}>
     <h3 className={styles.infoHeading}>Expert Craftsmanship</h3>
     <p className={styles.infoText}>
-      Each design is handcrafted by artisans with decades of experience.
+      Each design is crafted by jewelers with years of hands-on experience.
     </p>
   </div>
 
   {/* ––––– Info Item #3 ––––– */}
   <div className={styles.infoItem}>
-    <h3 className={styles.infoHeading}>Premium Materials</h3>
+    <h3 className={styles.infoHeading}>Design-First Approach</h3>
     <p className={styles.infoText}>
-      We source only the finest metals and stones for lasting beauty.
+      We balance form and individuality to create something personal.
     </p>
   </div>
 </section>
@@ -196,9 +188,9 @@ export default function Home() {
       className={styles.featureImage}
       placeholder="empty"
     />
-    <h2 className={styles.featureHeading}>Guidance, Not Guesswork</h2>
+    <h2 className={styles.featureHeading}>The York Paris Philosophy</h2>
     <p className={styles.featureText}>
-      We share insights on materials, design options, and craftsmanship so you can make confident, meaningful choices.
+      We are built on refined simplicity, thoughtful design, and personal meaning. Each piece is made to last, feel intentional, and speak to the individual who wears it.
     </p>
   </div>
 
@@ -213,9 +205,9 @@ export default function Home() {
       className={styles.featureImage}
       placeholder="empty"
     />
-    <h2 className={styles.featureHeading}>The Foundation of Craft</h2>
+    <h2 className={styles.featureHeading}>Every Piece Has a Story</h2>
     <p className={styles.featureText}>
-      We focus on refined materials, precise craftsmanship, and timeless design to ensure your vision is built to last.
+      Jewelry becomes personal when it captures a feeling or a memory. At York Paris, storytelling is woven into every design, crafted to feel meaningful and lasting.
     </p>
   </div>
 </section>
