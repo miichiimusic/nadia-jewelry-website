@@ -14,9 +14,9 @@ export default function Home() {
           <p className={styles.heroText}>
             From concept to creation, we craft one-of-a-kind jewelry, made to order with precision, beauty, and meaning.
           </p>
-          <a href="/contact" className={styles.heroPreTitle}>
-      GET STARTED
-    </a>
+          <Link href="/contact" className={styles.heroPreTitle}>
+  GET STARTED
+</Link>
         </div>
         <div className={styles.heroRight}>
           {/* Put your actual image file (e.g. new_hero_image.jpg) into /public/ */}
