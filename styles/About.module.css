@@ -60,7 +60,7 @@
 
 /* Image styling */
 .aboutImage {
-  width: 100%;
+  max-width: 400px; /* Limit max width */
   height: auto;
   object-fit: cover;
   margin-bottom: 3rem;

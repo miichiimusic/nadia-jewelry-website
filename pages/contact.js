@@ -21,15 +21,9 @@ export default function Contact() {
             </a>
           </div>
           <div className={styles.contactItem}>
-            <Calendar size={20} className={styles.icon} />
-            <a href="/book-appointment" className={styles.contactLink}>
-              Book a Consultation
-            </a>
-          </div>
-          <div className={styles.contactItem}>
             <Phone size={20} className={styles.icon} />
-            <a href="tel:+18887952533" className={styles.contactLink}>
-              +1-888-795-2533
+            <a href="tel:+19546002311" className={styles.contactLink}>
+              +1-954-600-2311
             </a>
           </div>
         </div>

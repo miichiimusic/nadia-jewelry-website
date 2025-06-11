@@ -4,14 +4,15 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  padding-top: 8rem; /* Space for the fixed header */
+  padding-top: 6rem; /* Space for the fixed header */
 }
 
 .educationTitle {
   font-family: 'Bodoni Moda', serif;
+  font-weight: normal;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: #171717;
 }
 
@@ -20,7 +21,7 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .tagItem,

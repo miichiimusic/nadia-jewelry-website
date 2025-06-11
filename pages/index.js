@@ -14,7 +14,7 @@ export default function Home() {
           <p className={styles.heroText}>
             From concept to creation, we craft one-of-a-kind jewelry, made to order with precision, beauty, and meaning.
           </p>
-          <a href="#get-started" className={styles.heroPreTitle}>
+          <a href="/contact" className={styles.heroPreTitle}>
       GET STARTED
     </a>
         </div>
@@ -188,10 +188,12 @@ export default function Home() {
       className={styles.featureImage}
       placeholder="empty"
     />
+    <Link href="/contact" className={styles.textLink}>
     <h2 className={styles.featureHeading}>The York Paris Philosophy</h2>
     <p className={styles.featureText}>
       We are built on refined simplicity, thoughtful design, and personal meaning. Each piece is made to last, feel intentional, and speak to the individual who wears it.
     </p>
+    </Link>
   </div>
 
   {/* ––––– Feature Item #2 ––––– */}
@@ -205,10 +207,12 @@ export default function Home() {
       className={styles.featureImage}
       placeholder="empty"
     />
+    <Link href="/contact" className={styles.textLink}>
     <h2 className={styles.featureHeading}>Every Piece Has a Story</h2>
     <p className={styles.featureText}>
       Jewelry becomes personal when it captures a feeling or a memory. At York Paris, storytelling is woven into every design, crafted to feel meaningful and lasting.
     </p>
+    </Link>
   </div>
 </section>
 {/* ============================================================== */}
