@@ -34,7 +34,7 @@ export default function MenuOverlay({ isOpen, onClose, links, imageSrc }) {
       <div className={styles.content}>
         {/* Left side: brand above links */}
         <div className={styles.linksContainer}>
-          <div className={styles.overlayBrand}>York Paris</div>
+          <div className={styles.overlayBrand}>Your Brand</div>
           {links.map((link) => (
             <a
               key={link.href}

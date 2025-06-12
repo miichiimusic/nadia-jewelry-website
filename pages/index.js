@@ -189,7 +189,7 @@ export default function Home() {
       placeholder="empty"
     />
     <Link href="/contact" className={styles.textLink}>
-    <h2 className={styles.featureHeading}>The York Paris Philosophy</h2>
+    <h2 className={styles.featureHeading}>The Your Brand Philosophy</h2>
     <p className={styles.featureText}>
       We are built on refined simplicity, thoughtful design, and personal meaning. Each piece is made to last, feel intentional, and speak to the individual who wears it.
     </p>
@@ -210,7 +210,7 @@ export default function Home() {
     <Link href="/contact" className={styles.textLink}>
     <h2 className={styles.featureHeading}>Every Piece Has a Story</h2>
     <p className={styles.featureText}>
-      Jewelry becomes personal when it captures a feeling or a memory. At York Paris, storytelling is woven into every design, crafted to feel meaningful and lasting.
+      Jewelry becomes personal when it captures a feeling or a memory. At Your Brand, storytelling is woven into every design, crafted to feel meaningful and lasting.
     </p>
     </Link>
   </div>

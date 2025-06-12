@@ -74,7 +74,7 @@ export default function NavBar() {
 
           {/* Center: brand name */}
           <Link href="/" className={styles.brand}>
-            York Paris
+            Your Brand
           </Link>
 
           {/* Right: phone icon */}

@@ -28,7 +28,7 @@ export default function Footer() {
 
         {/* Right: simple copyright */}
         <div className={styles.copy}>
-          © {new Date().getFullYear()} York Paris. All rights reserved.
+          © {new Date().getFullYear()} Your Brand. All rights reserved.
         </div>
       </div>
     </footer>
