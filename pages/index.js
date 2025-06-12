@@ -98,7 +98,7 @@ export default function Home() {
     placeholder="empty"
   />
   <Link href="/contact" className={styles.textLink}>
-    <h1 className={styles.heroHeading}>York Paris Cocktail Ring</h1>
+    <h1 className={styles.heroHeading}>Your Brand Cocktail Ring</h1>
     <p className={styles.heroText}>
       18K White Gold Ring with a Custom Cut Lapiz Stone
     </p>
