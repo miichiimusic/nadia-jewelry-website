@@ -98,7 +98,7 @@ export default function Home() {
     placeholder="empty"
   />
   <Link href="/contact" className={styles.textLink}>
-    <h1 className={styles.heroHeading}>Your Brand Cocktail Ring</h1>
+    <h1 className={styles.heroHeading}>York Paris Cocktail Ring</h1>
     <p className={styles.heroText}>
       18K White Gold Ring with a Custom Cut Lapiz Stone
     </p>
@@ -189,7 +189,7 @@ export default function Home() {
       placeholder="empty"
     />
     <Link href="/contact" className={styles.textLink}>
-    <h2 className={styles.featureHeading}>The Your Brand Philosophy</h2>
+    <h2 className={styles.featureHeading}>The York Paris Philosophy</h2>
     <p className={styles.featureText}>
       We are built on refined simplicity, thoughtful design, and personal meaning. Each piece is made to last, feel intentional, and speak to the individual who wears it.
     </p>
