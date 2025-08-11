@@ -19,10 +19,13 @@ export default function Home() {
       placeholder="empty"
     />
 
-    <h1 className={styles.heroHeading}>The Custom Experience</h1>
+    <h1 className={styles.heroHeading}>Nadia Dual Wave Stackable Ring</h1>
     <p className={styles.heroText}>
-      We translate your ideas into heirlooms, offering a bespoke process that is as memorable as the jewelry itself.
+    Two fluid gold bands embrace a brilliant round lab-grown diamond in a modern, minimalist design.
     </p>
+    <Link href="/contact" className={styles.exploreLink}>
+      EXPLORE
+    </Link>
   </div>
   <div className={styles.heroRight}>
     <Image
