@@ -5,40 +5,13 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* ===== New Top Hero Section (Text Left, Image Right; custom background) ===== */}
-      <section
-        className={`${styles.heroSection} ${styles.coloredHeroSection}`}
-      >
-        <div className={`${styles.heroLeft} ${styles.newHeroLeft}`}>
-          <h1 className={styles.heroHeading}>Custom-Made Fine Jewelry</h1>
-          <p className={styles.heroText}>
-            From concept to creation, we craft one-of-a-kind jewelry, made to order with precision, beauty, and meaning.
-          </p>
-          <Link href="/contact" className={styles.heroPreTitle}>
-  GET STARTED
-</Link>
-        </div>
-        <div className={styles.heroRight}>
-          {/* Put your actual image file (e.g. new_hero_image.jpg) into /public/ */}
-          <Image
-            src="/new_hero_image.jpg"
-            alt="New Hero Image"
-            width={800}
-            height={600}
-            className={styles.heroImage}
-            placeholder="empty"
-          />
-        </div>
-      </section>
-
-      {/* ==== Section #3 (duplicate of #1; mobile flips; custom background) ==== */}
 <section
   className={`${styles.heroSection} ${styles.customExperienceSection}`}
 >
   <div className={styles.heroLeft}>
     <Image
-      src="/rose_pendant.jpg"
-      alt="Rose Pendant"
+      src="/nadia-stackable.jpg"
+      alt="Nadia Ring"
       width={800}
       height={600}
       quality={100} 
@@ -53,8 +26,8 @@ export default function Home() {
   </div>
   <div className={styles.heroRight}>
     <Image
-      src="/black_white_model.jpg"
-      alt="Black & white model"
+      src="/model.jpg"
+      alt="Model"
       width={800}
       height={600}
       className={styles.heroImage}
@@ -103,6 +76,7 @@ export default function Home() {
       18K White Gold Ring with a Custom Cut Lapiz Stone
     </p>
     <span className={styles.heroLink}>$1,795</span>
+    <span className={styles.exploreLink}>EXPLORE</span>
   </Link>
 </div>
 
@@ -123,6 +97,7 @@ export default function Home() {
       18K Yellow Gold Earrings with Custom Cut Cabochon Turquoise Stones
     </p>
     <span className={styles.heroLink}>$1,250</span>
+    <span className={styles.exploreLink}>EXPLORE</span>
   </Link>
 </div>
 </section>
