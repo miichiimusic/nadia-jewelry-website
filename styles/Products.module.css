@@ -230,13 +230,4 @@
   }
 }
 
-@media (max-width: 480px) {
-  .productsGrid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-  
-  .container {
-    padding: 0.75rem;
-  }
-}
+
