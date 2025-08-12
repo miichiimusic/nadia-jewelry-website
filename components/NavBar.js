@@ -70,7 +70,7 @@ export default function NavBar() {
           {/* Left: hamburger icon */}
           <button className={styles.iconButton} onClick={toggleMenu}>
             <Menu size={24} strokeWidth={1} />
-          </button>
+          </button> 
 
           {/* Center: brand name */}
           <Link href="/" className={styles.brand}>
