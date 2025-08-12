@@ -8,109 +8,109 @@ export default function Products() {
     {
       id: 1,
       name: "Dual Wave Stackable Ring",
-      image: "/1.jpg",
+      image: "/g001.jpg",
       height: "tall"
     },
     {
       id: 2,
       name: "Rose Gold Pendant Necklace",
-      image: "/2.jpg",
+      image: "/g002.jpg",
       height: "medium"
     },
     {
       id: 3,
       name: "Minimalist Gold Chain",
-      image: "/3.jpg",
+      image: "/g003.jpg",
       height: "short"
     },
     {
       id: 4,
       name: "Diamond Stud Earrings",
-      image: "/4.jpg",
+      image: "/g004.jpg",
       height: "tall"
     },
     {
       id: 5,
       name: "Gold Hoop Earrings",
-      image: "/5.jpg",
+      image: "/g005.jpg",
       height: "medium"
     },
     {
       id: 6,
       name: "Pearl Drop Necklace",
-      image: "/6.jpg",
+      image: "/g006.jpg",
       height: "short"
     },
     {
       id: 7,
       name: "Stackable Gold Bands",
-      image: "/7.jpg",
+      image: "/g007.jpg",
       height: "tall"
     },
     {
       id: 8,
       name: "Gold Chain Bracelet",
-      image: "/8.jpg",
+      image: "/g008.jpg",
       height: "medium"
     },
     {
       id: 9,
       name: "Minimalist Gold Ring",
-      image: "/9.jpg",
+      image: "/g009.jpg",
       height: "short"
     },
     {
       id: 10,
       name: "Gold Pendant with Chain",
-      image: "/10.jpg",
+      image: "/g010.jpg",
       height: "tall"
     },
     {
       id: 11,
       name: "Gold Stud Earrings",
-      image: "/11.jpg",
+      image: "/g011.jpg",
       height: "medium"
     },
     {
       id: 12,
       name: "Gold Chain Necklace",
-      image: "/12.jpg",
+      image: "/g012.jpg",
       height: "short"
     },
     {
       id: 13,
       name: "Gold Bangle Bracelet",
-      image: "/13.jpg",
+      image: "/g013.jpg",
       height: "tall"
     },
     {
       id: 14,
       name: "Gold Drop Earrings",
-      image: "/14.jpg",
+      image: "/g014.jpg",
       height: "medium"
     },
     {
       id: 15,
       name: "Gold Chain Ring",
-      image: "/15.jpg",
+      image: "/g015.jpg",
       height: "short"
     },
     {
       id: 16,
       name: "Gold Pendant Necklace",
-      image: "/16.jpg",
+      image: "/g016.jpg",
       height: "tall"
     },
     {
       id: 17,
       name: "Gold Hoop Earrings",
-      image: "/17.jpg",
+      image: "/g017.jpg",
       height: "medium"
     },
     {
       id: 18,
       name: "Gold Chain Bracelet",
-      image: "/18.jpg",
+      image: "/g018.jpg",
       height: "short"
     },
   ];
@@ -169,10 +169,12 @@ export default function Products() {
               <Image
                 src={product.image}
                 alt={product.name}
-                width={300}
-                height={400}
+                width={800}
+                height={1000}
+                quality={100}
                 className={styles.productImage}
                 placeholder="empty"
+                sizes="(max-width: 900px) 50vw, 33vw"
               />
             </div>
             <div className={styles.productInfo}>
