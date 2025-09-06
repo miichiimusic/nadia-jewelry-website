@@ -3,17 +3,24 @@
   padding-top: 3rem;
 }
 
-/* Hero Section - Exact copy from Home.module.css */
+/* Hero Section - Centered single container */
 .heroSection {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+  min-height: 60vh;
 }
 
-.heroLeft,
+.heroLeft {
+  width: 100%;
+  max-width: 800px;
+}
+
 .heroRight {
-  width: 50%;
+  display: none;
 }
 
 /* Left side: center everything both vertically & horizontally */
@@ -87,7 +94,7 @@
 }
 
 .productsTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: normal;
   color: #333;
   margin-bottom: 1rem;
@@ -97,7 +104,7 @@
 .productsSubtitle {
   font-size: 1.1rem;
   color: #666;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
   font-family: sans-serif;
@@ -112,9 +119,10 @@
 
 .productsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
   grid-auto-rows: min-content;
+  padding-bottom: 4rem;
 }
 
 .productCard {
@@ -148,11 +156,20 @@
 
 .productPrice {
   font-size: 1rem;
-  font-weight: 600;
-  color: #000;
+  font-weight: 500;
+  color: #1a1a1a;
   margin: 0;
-  font-family: 'Bodoni Moda', serif;
+  font-family: sans-serif;
 }
+
+.clickableCard {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+
 
 /* Images take their natural dimensions */
 .productImage {
@@ -162,16 +179,68 @@
   display: block;
 }
 
-/* Staggered effect - only middle column on desktop */
-.productCard:nth-child(3n+2) {
-  margin-top: 2rem;
+/* Enhanced staggered effect - 4 column layout */
+.productCard:nth-child(4n+1) {
+  margin-top: 0;
+  margin-bottom: -2rem;
 }
 
-/* Mobile-responsive tweaks for Hero Sections (<=900px) */
+.productCard:nth-child(4n+2) {
+  margin-top: 4rem;
+  margin-bottom: -2rem;
+}
+
+.productCard:nth-child(4n+3) {
+  margin-top: 0;
+  margin-bottom: -2rem;
+}
+
+.productCard:nth-child(4n+4) {
+  margin-top: 4rem;
+  margin-bottom: -2rem;
+}
+
+/* Medium screen breakpoint - 3 columns (900px and below) */
+@media (max-width: 900px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* 3 column staggered effect */
+  .productCard:nth-child(4n+1),
+  .productCard:nth-child(4n+2),
+  .productCard:nth-child(4n+3),
+  .productCard:nth-child(4n+4) {
+    margin-top: 0;
+    margin-bottom: -2rem;
+  }
+  
+  .productCard:nth-child(3n+1) {
+    margin-top: 0;
+    margin-bottom: -2rem;
+  }
+  
+  .productCard:nth-child(3n+2) {
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+  }
+  
+  .productCard:nth-child(3n+3) {
+    margin-top: 0;
+    margin-bottom: -2rem;
+  }
+}
+
+/* Mobile-responsive tweaks (<=900px) */
 @media (max-width: 900px) {
   .heroSection {
-    flex-direction: column-reverse;
-    padding-top: 0;
+    min-height: 50vh;
+  }
+
+  .heroLeft {
+    padding: 1.5rem;
   }
 
   .productsTitleSection {
@@ -186,26 +255,18 @@
     font-size: 1rem;
     padding: 0 1rem;
   }
-
-  /* Make each half take full width when stacked */
-  .heroLeft,
-  .heroRight {
-    width: 100%;
-  }
-
-  /* Adjust padding for mobile layout */
-  .heroLeft {
-    padding: 1.5rem;
-    aspect-ratio: 1.5 / 1;
-  }
   
   .container {
     padding: 0.5rem;
   }
-  
+}
+
+/* Mobile breakpoint - 2 columns (768px and below) */
+@media (max-width: 768px) {
   .productsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
+    padding-bottom: 3rem;
   }
   
   .productInfo {
@@ -220,13 +281,27 @@
     font-size: 0.9rem;
   }
   
-  /* Mobile staggered effect - only right column */
-  .productCard:nth-child(3n+2) {
+  /* Reset all staggered effects for 2 column layout */
+  .productCard:nth-child(4n+1),
+  .productCard:nth-child(4n+2),
+  .productCard:nth-child(4n+3),
+  .productCard:nth-child(4n+4),
+  .productCard:nth-child(3n+1),
+  .productCard:nth-child(3n+2),
+  .productCard:nth-child(3n+3) {
     margin-top: 0;
+    margin-bottom: -1.5rem;
+  }
+  
+  /* 2 column staggered effect */
+  .productCard:nth-child(2n+1) {
+    margin-top: 0;
+    margin-bottom: -1.5rem;
   }
   
   .productCard:nth-child(2n+2) {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: -1.5rem;
   }
 }
 

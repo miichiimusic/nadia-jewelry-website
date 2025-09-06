@@ -1,0 +1,220 @@
+/* styles/Inquiry.module.css */
+
+/* Full-width section with centered content */
+.inquirySection {
+  padding-top: 3rem; /* space for mobile navbar */
+}
+
+@media (min-width: 769px) {
+  .inquirySection {
+    padding-top: 4rem; /* space for desktop navbar */
+  }
+}
+
+/* ------------- Top Banner Section ------------- */
+.topBanner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background-color: #f1efeb;  /* pale green background (matching process page) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .topBanner {
+    padding: 4rem 1.5rem;
+  }
+}
+
+.bannerTitle {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #171717;
+  margin-bottom: 1rem;
+}
+
+.bannerSubtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Centered inquiry info block */
+.inquiryCenter {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Section headings */
+.sectionHeading {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #333333;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+
+.contactLink {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #777777;
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  color: #333333;
+}
+
+/* Contact Form */
+.formContainer {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #171717;
+  background: transparent;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: #777777;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #171717;
+  background: transparent;
+  color: #171717;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #171717;
+  color: white;
+}
+
+/* Additional Info */
+.additionalInfo {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  background: #fafafa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.additionalInfo h3 {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+.additionalInfo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.additionalInfo li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.additionalInfo li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #777777;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .inquiryCenter {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .inquiryHeading {
+    font-size: 1.3rem;
+  }
+
+  .inquiryText {
+    font-size: 1rem;
+  }
+
+
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+
+
+  .additionalInfo {
+    padding: 1.5rem;
+  }
+}

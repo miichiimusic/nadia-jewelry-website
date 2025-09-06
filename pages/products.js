@@ -1,119 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Products.module.css';
+import homeStyles from '../styles/Home.module.css';
+import { getAllProducts } from '../lib/products';
 
 export default function Products() {
-  // Sample product data - you can replace with your actual products
-  const products = [
-    {
-      id: 1,
-      name: "Dual Wave Stackable Ring",
-      image: "/g001.jpg",
-      height: "tall"
-    },
-    {
-      id: 2,
-      name: "Rose Gold Pendant Necklace",
-      image: "/g002.jpg",
-      height: "medium"
-    },
-    {
-      id: 3,
-      name: "Minimalist Gold Chain",
-      image: "/g003.jpg",
-      height: "short"
-    },
-    {
-      id: 4,
-      name: "Diamond Stud Earrings",
-      image: "/g004.jpg",
-      height: "tall"
-    },
-    {
-      id: 5,
-      name: "Gold Hoop Earrings",
-      image: "/g005.jpg",
-      height: "medium"
-    },
-    {
-      id: 6,
-      name: "Pearl Drop Necklace",
-      image: "/g006.jpg",
-      height: "short"
-    },
-    {
-      id: 7,
-      name: "Stackable Gold Bands",
-      image: "/g007.jpg",
-      height: "tall"
-    },
-    {
-      id: 8,
-      name: "Gold Chain Bracelet",
-      image: "/g008.jpg",
-      height: "medium"
-    },
-    {
-      id: 9,
-      name: "Minimalist Gold Ring",
-      image: "/g009.jpg",
-      height: "short"
-    },
-    {
-      id: 10,
-      name: "Gold Pendant with Chain",
-      image: "/g010.jpg",
-      height: "tall"
-    },
-    {
-      id: 11,
-      name: "Gold Stud Earrings",
-      image: "/g011.jpg",
-      height: "medium"
-    },
-    {
-      id: 12,
-      name: "Gold Chain Necklace",
-      image: "/g012.jpg",
-      height: "short"
-    },
-    {
-      id: 13,
-      name: "Gold Bangle Bracelet",
-      image: "/g013.jpg",
-      height: "tall"
-    },
-    {
-      id: 14,
-      name: "Gold Drop Earrings",
-      image: "/g014.jpg",
-      height: "medium"
-    },
-    {
-      id: 15,
-      name: "Gold Chain Ring",
-      image: "/g015.jpg",
-      height: "short"
-    },
-    {
-      id: 16,
-      name: "Gold Pendant Necklace",
-      image: "/g016.jpg",
-      height: "tall"
-    },
-    {
-      id: 17,
-      name: "Gold Hoop Earrings",
-      image: "/g017.jpg",
-      height: "medium"
-    },
-    {
-      id: 18,
-      name: "Gold Chain Bracelet",
-      image: "/g018.jpg",
-      height: "short"
-    },
-  ];
+  // Get products from shared data file
+  const products = getAllProducts();
 
   return (
     <main className={styles.main}>
@@ -153,9 +46,9 @@ export default function Products() {
       {/* Products Title Section */}
       <section className={styles.productsTitleSection}>
         <div className={styles.container}>
-          <h2 className={styles.productsTitle}>Our Collection</h2>
+          <h2 className={styles.productsTitle}>Nadia&apos;s Design Collage</h2>
           <p className={styles.productsSubtitle}>
-            Discover our handcrafted jewelry pieces, each designed with timeless elegance and modern sophistication.
+          A curated mix of signature designs, each one ready to be tailored to your style.
           </p>
         </div>
       </section>
@@ -164,7 +57,11 @@ export default function Products() {
       <div className={styles.container}>
         <div className={styles.productsGrid}>
         {products.map((product) => (
-          <div key={product.id} className={`${styles.productCard} ${styles[product.height]}`}>
+          <Link 
+            href={`/products/${product.slug}`} 
+            key={product.id} 
+            className={`${styles.productCard} ${styles[product.height]} ${styles.clickableCard}`}
+          >
             <div className={styles.imageContainer}>
               <Image
                 src={product.image}
@@ -179,11 +76,168 @@ export default function Products() {
             </div>
             <div className={styles.productInfo}>
               <h3 className={styles.productName}>{product.name}</h3>
+              <p className={styles.productPrice}>${product.price.toLocaleString()}</p>
             </div>
-          </div>
+          </Link>
         ))}
         </div>
       </div>
+
+      {/* ==== Section #2 (Image Left, Text Right) ==== */}
+      <section className={`${homeStyles.heroSection} ${homeStyles.reverseOnMobile} ${homeStyles.ethosSection}`}>
+        <div className={homeStyles.heroRight}>
+          <Image
+            src="/pink_diamond_ring.jpg"
+            alt="Pink diamond ring"
+            width={800}
+            height={600}
+            quality={100} 
+            className={homeStyles.heroImage}
+            placeholder="empty"
+          />
+        </div>
+        <div className={`${homeStyles.heroLeft} ${homeStyles.ethosLeft}`}>
+          <h1 className={homeStyles.heroHeading}>Our Design Ethos</h1>
+          <p className={homeStyles.heroText}>
+            Jewelry should reflect a personal story, where artistic vision meets timeless form and meaning is built into every detail.
+          </p>
+        </div>
+      </section>
+
+      {/* ==== Section #4 (Materials & Craftsmanship; image on top in both columns) ==== */}
+      <section className={`${homeStyles.heroSection} ${homeStyles.materialsSection}`}>
+        {/* ––––– Column #1 ––––– */}
+        <div className={`${homeStyles.heroLeft} ${homeStyles.withTopImage}`}>
+          <Image
+            src="/lapiz.jpg"
+            alt="York Paris Cocktail Ring"
+            width={800}
+            height={600}
+            quality={100}
+            className={homeStyles.topImage}
+            placeholder="empty"
+          />
+          <Link href="/contact" className={homeStyles.textLink}>
+            <h1 className={homeStyles.heroHeading}>York Paris Cocktail Ring</h1>
+            <p className={homeStyles.heroText}>
+              18K White Gold Ring with a Custom Cut Lapiz Stone
+            </p>
+            <span className={homeStyles.heroLink}>$1,795</span>
+            <span className={homeStyles.exploreLink}>EXPLORE</span>
+          </Link>
+        </div>
+
+        {/* ––––– Column #2 (duplicate of column #1 for now) ––––– */}
+        <div className={`${homeStyles.heroLeft} ${homeStyles.withTopImage}`}>
+          <Image
+            src="/jade_earrings.jpg"
+            alt="Orbit Turquoise Earrings"
+            width={800}
+            height={600}
+            quality={100}
+            className={homeStyles.topImage}
+            placeholder="empty"
+          />
+          <Link href="/contact" className={homeStyles.textLink}>
+            <h1 className={homeStyles.heroHeading}>Orbit Turquoise Earrings</h1>
+            <p className={homeStyles.heroText}>
+              18K Yellow Gold Earrings with Custom Cut Cabochon Turquoise Stones
+            </p>
+            <span className={homeStyles.heroLink}>$1,250</span>
+            <span className={homeStyles.exploreLink}>EXPLORE</span>
+          </Link>
+        </div>
+      </section>
+      
+      {/* ==== Section #1 (Text Left, Image Right; colored background + mobile ratio) ==== */}
+      <section className={`${homeStyles.heroSection} ${homeStyles.madeSection}`}>
+        <div className={`${homeStyles.heroLeft} ${homeStyles.madeLeft}`}>
+          <h1 className={homeStyles.heroHeading}>Made Just for You</h1>
+          <p className={homeStyles.heroText}>
+            Distinct pieces made with intention, shaped by your vision, and crafted to last.
+          </p>
+        </div>
+        <div className={homeStyles.heroRight}>
+          <Image
+            src="/gold_earrings.jpg"
+            alt="Gold earrings"
+            width={800}
+            height={600}
+            className={homeStyles.heroImage}
+            placeholder="empty"
+          />
+        </div>
+      </section>
+
+      {/* =============== Info Section (3 Columns) =============== */}
+      <section className={homeStyles.infoSection}>
+        {/* ––––– Info Item #1 ––––– */}
+        <div className={homeStyles.infoItem}>
+          <h3 className={homeStyles.infoHeading}>Satisfaction Guarantee</h3>
+          <p className={homeStyles.infoText}>
+            We promise you&apos;ll love your custom piece, or we&apos;ll make it right.
+          </p>
+        </div>
+
+        {/* ––––– Info Item #2 ––––– */}
+        <div className={homeStyles.infoItem}>
+          <h3 className={homeStyles.infoHeading}>Expert Craftsmanship</h3>
+          <p className={homeStyles.infoText}>
+            Each design is crafted by jewelers with years of hands-on experience.
+          </p>
+        </div>
+
+        {/* ––––– Info Item #3 ––––– */}
+        <div className={homeStyles.infoItem}>
+          <h3 className={homeStyles.infoHeading}>Design-First Approach</h3>
+          <p className={homeStyles.infoText}>
+            We balance form and individuality to create something personal.
+          </p>
+        </div>
+      </section>
+      {/* ============================================================ */}
+
+      {/* =============== Feature Section (2 Columns) =============== */}
+      <section className={homeStyles.featureSection}>
+        {/* ––––– Feature Item #1 ––––– */}
+        <div className={homeStyles.featureItem}>
+          <Image
+            src="/about1.jpg"      /* ← put your image in /public/ */
+            alt="Feature 1"
+            width={800}
+            height={600}
+            quality={100} 
+            className={homeStyles.featureImage}
+            placeholder="empty"
+          />
+          <Link href="/contact" className={homeStyles.textLink}>
+            <h2 className={homeStyles.featureHeading}>The York Paris Philosophy</h2>
+            <p className={homeStyles.featureText}>
+              We are built on refined simplicity, thoughtful design, and personal meaning. Each piece is made to last, feel intentional, and speak to the individual who wears it.
+            </p>
+          </Link>
+        </div>
+
+        {/* ––––– Feature Item #2 ––––– */}
+        <div className={homeStyles.featureItem}>
+          <Image
+            src="/about2.jpg"      /* ← put your second image in /public/ */
+            alt="Feature 2"
+            width={800}
+            height={600}
+            quality={100} 
+            className={homeStyles.featureImage}
+            placeholder="empty"
+          />
+          <Link href="/contact" className={homeStyles.textLink}>
+            <h2 className={homeStyles.featureHeading}>Every Piece Has a Story</h2>
+            <p className={homeStyles.featureText}>
+              Jewelry becomes personal when it captures a feeling or a memory. At Your Brand, storytelling is woven into every design, crafted to feel meaningful and lasting.
+            </p>
+          </Link>
+        </div>
+      </section>
+      {/* ============================================================== */}
     </main>
   );
 }
